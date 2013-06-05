@@ -1,83 +1,84 @@
+---
 ru:
-  activerecord:
-    attributes:
-      spree/review:
-        title: Заголовок
-        review: Содержание
-        rating: Рейтинг
-        name: Ваше имя
-        created_at: Дата отзыва
-        ip_address: IP
-        user: Пользователь
-    models:
-      spree/review:
-        zero: "0 отзывов"
-        one: "%{count} отзыв"
-        few: "%{count} отзыва"
-        other: "%{count} отзывов"
-  reviews: Отзывы
-  title: Заголовок
-  write_your_own_review: Оставьте свой отзыв
-  review_management: Управление отзывами
-  back_reviews: Назад к отзывам
-  are_you_sure_review: Вы уверены, что хотите удалить отзыв?
-  info_approve_review: Отзыв одобрен
-  error_approve_review: Ошибка при одобрении отзыва
-  approve: Одобрить
-  leave_us_a_review_for: Пожалуйста, оставьте отзыв и оценку для
-  review_successfully_submitted: Ваш отзыв был успешно отправлен
-  rating: Оценка
-  submit_your_review: Оставить отзыв
-  review_content: Содержание
-  review_title: Заголовок
-  spree_reviews:
-    review_settings: Настройки отзывов покупателей
-    manage_review_settings: Управление отображением отзывов
-    preview_size: Количество отзывов на странице товара
-    include_unapproved: Показывать неодобренные отзывы на странице товара
-    your_name: Ваше имя
-    your_location: Город
-    feedback_rating: Рейтинг отзыва
-    show_email: Показывать электронную почту
-    require_login: Требовать вход
-    track_locale: Отслеживать язык
-  average_customer_rating: Средняя оценка
-  the_fine_print: Мелкий текст
-  terms_text: Все отзывы должны быть написаны в соответствии с условиями и соглашениями
-  approved_text: Разблокированные комментарии будут опубликованы в течение 1-2 рабочих дней.
-  guideline_text: Мы оставляем за собой право не публиковать отзывы не имеющие отношения к продукту
-  terms_and_conditions: Условия и соглашения
-  review_guidelines: Советы по составлению отзывов
-  review_name: Ваше имя
-  review_header: Отзывы
-  date_: Дата
-  for: для
-  approval_status: Статус отзывов
-  Unapproved_reviews: Неутверждённые отзывы
-  Approved_reviews: Утверждённые отзывы
-  from: от
-  by: ""
-  submitted_on: Добавлено
-  based_upon: "на основе"
-  voice:
-    zero: "0 голосов"
-    one: "%{count} голос"
-    few: "%{count} голоса"
-    other: "%{count} голосов"
-  star: "%{count}"
-
-  feedback: Обратная связь
-  stars: Звёзды
-  feedback_review_for: "Отзывы: '%{review}'"
-  out_of_5: "из 5"
-  was_this_review_helpful: "Был ли Вам полезен этот отзыв?"
-  you_must_enter_value_for_rating: "Вы должны оценить отзыв."
-
-  original_version: 'Исходная версия'
-  edited_version: 'Отредактированная версия'
-  editing_review_for_html: 'Редактирование отзыва для HTML'
-  no_reviews_available: "Отзывов нет"
-  based_upon_review_count: "На основании всех отзывов"
-
-  yes: Да
-  no: Нет
+  spree:
+    activerecord:
+      attributes:
+        spree/review:
+          created_at: "Дата отзыва"
+          ip_address: IP
+          name: "Ваше имя"
+          rating: Рейтинг
+          review: Содержание
+          title: Заголовок
+          user: Пользователь
+      models:
+        spree/review:
+          few: "%{count} отзыва"
+          one: "%{count} отзыв"
+          other: "%{count} отзывов"
+          zero: "0 отзывов"
+          many: "%{count} отзывов"
+    approval_status: "Статус отзывов"
+    approve: Одобрить
+    approved_reviews: "Утверждённые отзывы"
+    approved_text: "Разблокированные комментарии будут опубликованы в течение 1-2 рабочих дней."
+    are_you_sure_review: "Вы уверены, что хотите удалить отзыв?"
+    average_customer_rating: "Средняя оценка"
+    back_reviews: "Назад к отзывам"
+    based_upon: "на основе"
+    based_upon_review_count: "На основании всех отзывов"
+    by: ""
+    date_: Дата
+    edited_version: "Отредактированная версия"
+    editing_review_for_html: "Редактирование отзыва для HTML"
+    error_approve_review: "Ошибка при одобрении отзыва"
+    error_no_product: "The reviewed product doesn't exist anymore"
+    feedback: "Обратная связь"
+    feedback_review_for: "Отзывы: %{review}"
+    for: для
+    from: от
+    guideline_text: "Мы оставляем за собой право не публиковать отзывы не имеющие отношения к продукту"
+    info_approve_review: "Отзыв одобрен"
+    leave_us_a_review_for: "Пожалуйста, оставьте отзыв и оценку для"
+    no_reviews_available: "Отзывов нет"
+    original_version: "Исходная версия"
+    out_of_5: "из 5"
+    rating: Оценка
+    review_content: Содержание
+    review_guidelines: "Советы по составлению отзывов"
+    review_header: Отзывы
+    review_management: "Управление отзывами"
+    review_not_submitted: "Обзор не был представлен"
+    review_name: "Ваше имя"
+    review_successfully_submitted: "Ваш отзыв был успешно отправлен"
+    review_title: Заголовок
+    reviews: Отзывы
+    spree_reviews:
+      feedback_rating: "Рейтинг отзыва"
+      include_unapproved: "Показывать неодобренные отзывы на странице товара"
+      manage_review_settings: "Управление отображением отзывов"
+      preview_size: "Количество отзывов на странице товара"
+      require_login: "Требовать вход"
+      review_settings: "Настройки отзывов покупателей"
+      show_email: "Показывать электронную почту"
+      track_locale: "Отслеживать язык"
+      your_location: Город
+      your_name: "Ваше имя"
+    star: "%{count}"
+    stars: Звёзды
+    submit_your_review: "Оставить отзыв"
+    submitted_on: Добавлено
+    terms_and_conditions: "Условия и соглашения"
+    terms_text: "Все отзывы должны быть написаны в соответствии с условиями и соглашениями"
+    the_fine_print: "Мелкий текст"
+    title: Заголовок
+    unapproved_reviews: "Неутверждённые отзывы"
+    voice:
+      few: "%{count} голоса"
+      one: "%{count} голос"
+      other: "%{count} голосов"
+      zero: "0 голосов"
+      many: "%{count} голосов"
+    was_this_review_helpful: "Был ли Вам полезен этот отзыв?"
+    write_your_own_review: "Оставьте свой отзыв"
+    you_must_enter_value_for_rating: "Вы должны оценить отзыв."
