@@ -13,9 +13,7 @@ class Spree::FeedbackReviewsController < Spree::StoreController
 
     respond_to do |format|
       format.html { redirect_to :back  }
-      format.js   { render :action => :create }
+      format.js   { render :create }
     end
-
   end
 end
-

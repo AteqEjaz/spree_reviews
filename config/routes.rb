@@ -14,9 +14,9 @@ Spree::Core::Engine.routes.append do
     resources :reviews do
       collection do
         get :terms
-        get "submissionguidelines"
+        get 'submissionguidelines'
       end
     end
   end
-  match "/reviews/:review_id/feedback(.:format)" => "feedback_reviews#create", :via => :post, :as => "feedback_review"
+  match '/reviews/:review_id/feedback(.:format)' => 'feedback_reviews#create', via: :post, as: 'feedback_review'
 end
