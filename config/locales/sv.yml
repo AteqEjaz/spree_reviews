@@ -1,0 +1,73 @@
+---
+sv:
+  spree:
+    activerecord:
+      attributes:
+        spree/review:
+          created_at: Datum
+          ip_address: IP
+          name: "Ditt namn"
+          rating: Betyg
+          review: Inehåll
+          title: Titel
+          user: Användare
+      models:
+        spree/review:
+          one: "en recension"
+          other: "%{count} recension"
+    approve: Godkänn
+    approved_reviews: Godkänd
+    approved_text: "Olåst kommentarer kommer att publiceras inom 1-2 arbetsdagar."
+    are_you_sure_review: "Är du säker på att ta bort recension?"
+    average_customer_rating: "Genomsnittligt betyg"
+    back_reviews: "Tillbaka till recensionerna"
+    based_upon_review_count:
+      one: "baserad på en recension"
+      other: "baserad på %{count} recension"
+    by: av
+    date_: Datum
+    edited_version: "Editerad version"
+    editing_review_for_html: "Editerad recension för %{link}"
+    error_approve_review: "Problem med att godkänna recension"
+    error_no_product: "Den betygsatta produkten finns inte längre"
+    feedback: Återkoppling
+    feedback_review_for: "Recension: %{review}"
+    for: för
+    from: från
+    guideline_text: "Vi förbehåller oss rätten att inte publicera yttranden som inte är relaterade till din produkt"
+    info_approve_review: "Recensionen godkänd"
+    leave_us_a_review_for: "Vänligen gör en recension och sätt ett betyg för %{name}"
+    no_reviews_available: "Inga recensioner har ännu skrivits för den här produkten."
+    original_version: "Original versionn"
+    out_of_5: "ut av 5"
+    rating: betyg
+    review_guidelines: "Riktlinjer for recensioner"
+    review_management: Hantera recensioner
+    review_not_submitted: "Recensionen har inte ännu skickats"
+    review_successfully_submitted: "Recension har skapats"
+    reviews: Recensioner
+    spree_reviews:
+      feedback_rating: "Betygsåterkoppling"
+      include_unapproved: "Inkludera icke godkända recensioner i listan"
+      manage_review_settings: "Kontrollera visningen av recensionerna"
+      preview_size: "Storlek på recensions snippets"
+      require_login: "Kräv att användaren är inloggad"
+      review_settings: "Recensions inställningar"
+      show_email: "Visa epost adresser"
+      track_locale: "Spåra användarens språk"
+    star:
+      one: "1"
+      other: "%{count}"
+    stars: Stärnor
+    submit_your_review: "Skicka in din recension"
+    submitted_on: "Skapad den"
+    terms_and_conditions: "Villkor"
+    terms_text: "Alla yttranden måste följa våra villkor"
+    the_fine_print: "Det finstilta"
+    unapproved_reviews: Icke godkänd
+    voice:
+      one: "1 röst"
+      other: "%{count} röster"
+    was_this_review_helpful: "Var denna recension användbar för dig?"
+    write_your_own_review: "Skriv din egen recension"
+    you_must_enter_value_for_rating: "Du måste ange ett värde för betyg."
