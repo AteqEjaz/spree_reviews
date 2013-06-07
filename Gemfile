@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 group :test do
   gem 'rspec'
-  gem 'capybara'
-  gem 'factory_girl'
+  gem 'capybara', '~> 2.0.2'
+  gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'rspec-rails'
   gem 'simplecov'
