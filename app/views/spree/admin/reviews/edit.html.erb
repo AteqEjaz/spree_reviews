@@ -14,6 +14,6 @@
 <%= form_for([:admin, @review]) do |f| %>
   <%= render 'form', f: f %>
   <p class="form-buttons">
-    <%= button Spree.t(:update) %> <%= Spree.t(:or) %> <%= link_to t(:back_reviews), admin_reviews_path %>
+    <%= button Spree.t(:update) %> <%= Spree.t(:or) %> <%= link_to Spree.t(:back_reviews), admin_reviews_path %>
   </p>
 <% end %>
