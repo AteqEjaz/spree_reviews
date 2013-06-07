@@ -25,14 +25,13 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'spree_frontend', spree_version
   s.add_runtime_dependency 'spree_api', spree_version
 
-  s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'rspec-rails', '~> 2.13'
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'factory_girl_rails', '~> 4.2'
   s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'sqlite3', '~> 1.3.7'
-  s.add_development_dependency 'simplecov', '~> 0.7.1'
+  s.add_development_dependency 'sqlite3', '~> 1.3'
+  s.add_development_dependency 'simplecov', '~> 0.7'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'fuubar', '>= 0.0.1'
-  s.add_development_dependency 'i18n-spec', '~> 0.4.0'
+  s.add_development_dependency 'i18n-spec', '~> 0.4'
 end
