@@ -71,7 +71,7 @@
 
                 rater.addClass('rating-to-be-drawn');
 
-                if (input.attr('disabled') || input.hasClass('disabled')) {
+                if (input.prop('disabled') || input.hasClass('disabled')) {
                     control.readOnly = true;
                 }
 
@@ -98,7 +98,7 @@
             var star = $('<div role="text" aria-label="' + this.title + '" class="star-rating rater-' + control.serial + '"><a title="' + (this.title || this.value) + '">' + this.value + '</a></div>');
             rater.append(star);
 
-            if (this.id) star.attr('id', this.id);
+            if (this.id) star.prop('id', this.id);
             if (this.className) star.addClass(this.className);
 
             if (control.half) control.split = 2;
@@ -272,7 +272,7 @@
             }
             control.readOnly = toggle || toggle === undefined ? true : false;
             if (disable) {
-                $(control.inputs).attr('disabled', 'disabled');
+                $(control.inputs).prop('disabled', 'disabled');
             } else {
                 $(control.inputs).removeAttr('disabled');
             }
