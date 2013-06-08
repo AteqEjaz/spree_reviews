@@ -46,7 +46,6 @@ es:
     review_not_submitted: "La valoración no se ha enviado."
     review_successfully_submitted: "La valoración se ha enviado correctamente"
     reviews: Valoraciones
-    spree: ~
     spree_reviews:
       feedback_rating: "Puntuación en el feedback"
       include_unapproved: "Incluir en los listados las valoraciones sin aprobar"
