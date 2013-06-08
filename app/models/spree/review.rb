@@ -6,16 +6,27 @@ class Spree::Review < ActiveRecord::Base
   after_save :recalculate_product_rating, if: :approved?
   after_destroy :recalculate_product_rating
 
-  validates :name, :review, presence: true
-  validates_numericality_of :rating, only_integer: true
-
   default_scope { order('spree_reviews.created_at DESC') }
+
+  validates_presence_of     :name
+  validates_presence_of     :review, :if => :not_rating?
+  validates_presence_of     :rating, :if => :not_review?
+  validates_numericality_of :rating, only_integer: true
 
   scope :localized, lambda { |lc| where('spree_reviews.locale = ?', lc) }
 
   attr_protected :user_id, :product_id, :ip_address, :approved
 
+  def not_rating?
+    !rating
+  end
+
+  def not_review?
+    !review
+  end
+
   class << self
+
     def approved
       where(approved: true)
     end

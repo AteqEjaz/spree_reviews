@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'impressionist'
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
@@ -26,5 +28,3 @@ end
 gem 'spree', github: 'spree/spree'
 # provides basic authentication functionality for testing parts of your engine
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise'
-
-gemspec

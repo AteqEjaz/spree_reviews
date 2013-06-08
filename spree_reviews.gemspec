@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_runtime_dependency 'spree', '~> 2.0'
+  s.add_runtime_dependency 'impressionist'
 
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'capybara', '~> 2.1.0'
