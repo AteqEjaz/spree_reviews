@@ -1,21 +1,21 @@
 ---
 pl:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Utworzone
+        ip_address: IP
+        name: Imię
+        rating: Ocena
+        review: Treść
+        title: Tytuł
+        user: Użytkownik
+    models:
+      spree/review:
+        one: "jedna opinia"
+        other: "%{count} opinii"
+        few: "%{count} opinii"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Utworzone
-          ip_address: IP
-          name: Imię
-          rating: Ocena
-          review: Treść
-          title: Tytuł
-          user: Użytkownik
-      models:
-        spree/review:
-          one: "jedna opinia"
-          other: "%{count} opinii"
-          few: "%{count} opinii"
     approve: Zatwierdź
     approved_reviews: "Zatwierdzone opinie"
     approved_text: "Zatwierdzone opinie zostaną opublikowane w ciągu 1-2 dni roboczych."

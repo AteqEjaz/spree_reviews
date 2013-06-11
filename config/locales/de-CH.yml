@@ -1,20 +1,20 @@
 ---
 de-CH:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: "Erstellt am"
+        ip_address: IP
+        name: Name
+        rating: Bewertung
+        review: Inhalt
+        title: Überschrift
+        user: Benutzer
+    models:
+      spree/review:
+        one: "eine Rezension"
+        other: "%{count} Rezensionen"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: "Erstellt am"
-          ip_address: IP
-          name: Name
-          rating: Bewertung
-          review: Inhalt
-          title: Überschrift
-          user: Benutzer
-      models:
-        spree/review:
-          one: "eine Rezension"
-          other: "%{count} Rezensionen"
     approve: Freischalten
     approved_reviews: "Freigeschaltete Rezensionen"
     approved_text: "Freigeschalte Kommentare werden innerhalb von 1-2 Werktagen veröffentlicht."

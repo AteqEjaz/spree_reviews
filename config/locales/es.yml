@@ -1,20 +1,20 @@
 ---
 es:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Fecha
+        ip_address: IP
+        name: "Tu Nombre"
+        rating: Puntuación
+        review: Contenido
+        title: Título
+        user: Usuario
+    models:
+      spree/review:
+        one: "una valoración"
+        other: "%{count} valoraciones"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Fecha
-          ip_address: IP
-          name: "Tu Nombre"
-          rating: Puntuación
-          review: Contenido
-          title: Título
-          user: Usuario
-      models:
-        spree/review:
-          one: "una valoración"
-          other: "%{count} valoraciones"
     approve: Aprobar
     approved_reviews: Aprobado
     approved_text: "Los comentarios desbloqueados serán publicados en 1-2 días laborales."

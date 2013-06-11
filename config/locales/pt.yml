@@ -1,20 +1,20 @@
 ---
 pt:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Data
+        ip_address: IP
+        name: Nome
+        rating: Avaliação
+        review: Conteúdo
+        title: "Título Avaliação"
+        user: Utilizador
+    models:
+      spree/review:
+        one: "uma avaliação"
+        other: "%{count} avaliações"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Data
-          ip_address: IP
-          name: Nome
-          rating: Avaliação
-          review: Conteúdo
-          title: "Título Avaliação"
-          user: Utilizador
-      models:
-        spree/review:
-          one: "uma avaliação"
-          other: "%{count} avaliações"
     approve: Aprovar
     approved_reviews: "Avaliações aprovadas"
     approved_text: "As avaliações podem demorar 1-2 dias úteis a ser publicadas."

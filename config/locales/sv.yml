@@ -1,20 +1,20 @@
 ---
 sv:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Datum
+        ip_address: IP
+        name: "Ditt namn"
+        rating: Betyg
+        review: Inehåll
+        title: Titel
+        user: Användare
+    models:
+      spree/review:
+        one: "en recension"
+        other: "%{count} recension"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Datum
-          ip_address: IP
-          name: "Ditt namn"
-          rating: Betyg
-          review: Inehåll
-          title: Titel
-          user: Användare
-      models:
-        spree/review:
-          one: "en recension"
-          other: "%{count} recension"
     approve: Godkänn
     approved_reviews: Godkänd
     approved_text: "Olåst kommentarer kommer att publiceras inom 1-2 arbetsdagar."

@@ -1,23 +1,23 @@
 ---
 ru:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: "Дата отзыва"
+        ip_address: IP
+        name: "Ваше имя"
+        rating: Рейтинг
+        review: Содержание
+        title: Заголовок
+        user: Пользователь
+    models:
+      spree/review:
+        few: "%{count} отзыва"
+        one: "%{count} отзыв"
+        other: "%{count} отзывов"
+        zero: "0 отзывов"
+        many: "%{count} отзывов"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: "Дата отзыва"
-          ip_address: IP
-          name: "Ваше имя"
-          rating: Рейтинг
-          review: Содержание
-          title: Заголовок
-          user: Пользователь
-      models:
-        spree/review:
-          few: "%{count} отзыва"
-          one: "%{count} отзыв"
-          other: "%{count} отзывов"
-          zero: "0 отзывов"
-          many: "%{count} отзывов"
     approval_status: "Статус отзывов"
     approve: Одобрить
     approved_reviews: "Утверждённые отзывы"

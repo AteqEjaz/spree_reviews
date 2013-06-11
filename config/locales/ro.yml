@@ -1,21 +1,21 @@
 ---
 ro:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Data
+        ip_address: IP
+        name: Nume
+        rating: Evaluare
+        review: Conținut
+        title: Titlu
+        user: Utilizator
+    models:
+      spree/review:
+        one: "o recenzie"
+        other: "%{count} recenzii"
+        few: "%{count} recenzie"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Data
-          ip_address: IP
-          name: Nume
-          rating: Evaluare
-          review: Conținut
-          title: Titlu
-          user: Utilizator
-      models:
-        spree/review:
-          one: "o recenzie"
-          other: "%{count} recenzii"
-          few: "%{count} recenzie"
     approve: Aprobă
     approved_reviews: Aprobate
     approved_text: "Comentariile deblocate vor fi publicate în 1-2 zile lucrătoare."

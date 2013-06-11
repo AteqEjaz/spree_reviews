@@ -1,20 +1,20 @@
 ---
 en:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Date
+        ip_address: IP
+        name: "Your Name"
+        rating: Rating
+        review: Content
+        title: Title
+        user: User
+    models:
+      spree/review:
+        one: "one review"
+        other: "%{count} reviews"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Date
-          ip_address: IP
-          name: "Your Name"
-          rating: Rating
-          review: Content
-          title: Title
-          user: User
-      models:
-        spree/review:
-          one: "one review"
-          other: "%{count} reviews"
     approve: Approve
     approved_reviews: Approved
     approved_text: "Unlocked comments will be published within 1-2 business days."

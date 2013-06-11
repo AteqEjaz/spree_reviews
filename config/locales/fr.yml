@@ -1,20 +1,20 @@
 ---
 fr:
+  activerecord:
+    attributes:
+      spree/review:
+        created_at: Date
+        ip_address: IP
+        name: "Votre nom"
+        rating: Note
+        review: Contenu
+        title: Titre
+        user: Utilisateur
+    models:
+      spree/review:
+        one: "un commentaire"
+        other: "%{count} commentaires"
   spree:
-    activerecord:
-      attributes:
-        spree/review:
-          created_at: Date
-          ip_address: IP
-          name: "Votre nom"
-          rating: Note
-          review: Contenu
-          title: Titre
-          user: Utilisateur
-      models:
-        spree/review:
-          one: "un commentaire"
-          other: "%{count} commentaires"
     approve: Approuver
     approved_reviews: Approuvé
     approved_text: "Les commentaires authorisés seront affichés dans un délai de un à deux jours ouvrables."
