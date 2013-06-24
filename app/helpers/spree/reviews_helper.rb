@@ -1,5 +1,4 @@
 module Spree::ReviewsHelper
-
   def star(the_class)
     content_tag(:span, " &#10030; ".html_safe, class: the_class)
   end
@@ -13,5 +12,4 @@ module Spree::ReviewsHelper
     res += " #{Spree.t(:out_of_5)}" if show_out_of
     res
   end
-
 end

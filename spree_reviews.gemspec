@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara-webkit', '~> 1.0.0'
   s.add_development_dependency 'rspec-rails', '~> 2.13'
   s.add_development_dependency 'factory_girl_rails', '~> 4.2'
+  s.add_development_dependency 'shoulda-matchers', '~> 2.0'
   s.add_development_dependency 'sqlite3', '~> 1.3.7'
   s.add_development_dependency 'simplecov', '~> 0.7.1'
   s.add_development_dependency 'database_cleaner'

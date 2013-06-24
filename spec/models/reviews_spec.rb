@@ -3,6 +3,24 @@ require 'spec_helper'
 describe Spree::Review do
   let(:review) { create(:review) }
 
+  context "relations" do
+    it { should belong_to(:product) }
+    it { should belong_to(:user) }
+    it { should have_many(:feedback_reviews) }
+  end
+
+  context "validation" do
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:review) }
+    it { should validate_numericality_of(:rating) }
+  end
+
+  context "mass assingment" do
+    %w(user_id product_id ip_address approved).each do |col|
+      it { should_not allow_mass_assignment_of(col.to_sym) }
+    end
+  end
+
   context "creating a new review" do
     it "is valid with valid attributes" do
       review.should be_valid
@@ -61,7 +79,7 @@ describe Spree::Review do
       end
     end
 
-    it "should return the average rating from feedback reviews" do
+    it "return the average rating from feedback reviews" do
       review.feedback_stars.should == 2
     end
   end
