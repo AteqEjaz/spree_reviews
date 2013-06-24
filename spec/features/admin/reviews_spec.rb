@@ -5,22 +5,23 @@ describe "Review Admin", js: true do
 
   let!(:review) { create(:review) }
 
-  it "should list out the reviews" do
+  before do
+    2.times { create(:review) }
     visit spree.admin_reviews_path
+  end
+
+  it "list out the reviews" do
     page.should have_content(review.title)
   end
 
-  it "should be able to approve the reviews" do
-    visit spree.admin_reviews_path
-    page.should have_content(review.title)
-    within("tr#review_#{review.id}") { click_link "Approve" }
-    page.should_not have_content(review.title)
+  it "can approve the reviews" do
+    review.approved.should be_false
+    page.find("tr#review_#{review.id}").find("a.approve").trigger(:click)
+    review.reload.approved.should be_true
   end
 
-  it "should be able to edit the reviews" do
-    visit spree.admin_reviews_path
-    page.should have_content(review.title)
-    within("tr#review_#{review.id}") { click_link "Edit" }
+  it "can edit the reviews" do
+    page.find("tr#review_#{review.id}").find("a.edit").trigger(:click)
     page.should have_content("Editing")
     page.should have_content(review.title)
   end
