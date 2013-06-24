@@ -6,7 +6,7 @@
 
 Straightforward review/rating facility.
 
-### Installation
+## Installation
 
 To use the last stable gem release of spree_reviews, add the following to your Gemfile:
 ```ruby
@@ -40,7 +40,7 @@ rails s
 
 That's all!
 
-### Usage
+## Usage
 
 Action "submit" in "reviews" controller - goes to review entry form
 
@@ -53,21 +53,21 @@ Three partials:
 
 Administrator can edit and/or approve and/or delete reviews.
 
-### Implementation
+## Implementation
 
 Reviews table is quite obvious - and note the "approved" flag which is for the
 administrator to update
 
 Ratings table holds current fractional value - avoids frequent recalc...
 
-### TODO
+## TODO
 
 - Partial(s) for selecting _approved_ reviews to read
 - REST routes needed in some places?
 - Only accept ratings for approved reviews?
 - Allow stand alone rating values?
 
-### Discussion
+## Discussion
 
 Some points which might need modification in future:
  - I don't track the actual user on a review (just their "screen name" at the
@@ -80,14 +80,33 @@ Some points which might need modification in future:
 
 ## Contributing
 
+In the spirit of [free software][1], **everyone** is encouraged to help improve this project.
+
+Here are some ways *you* can contribute:
+
+* by using prerelease versions
+* by reporting [bugs][2]
+* by suggesting new features
+* by writing or editing documentation
+* by writing specifications
+* by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
+* by refactoring code
+* by resolving [issues][2]
+* by reviewing patches
+
+Starting point:
+
 * Fork the repo
-* Clone your repo `git clone git@github.com:mrhelpful/spree_reviews.git`
-* Create branch for your pull request `git checkout -b fix-something`
+* Clone your repo
 * Run `bundle`
-* Run `bundle exec rake test_app` to create the test application in `spec/dummy`
-* Make your changes
-* Ensure specs pass by running `bundle exec rake`
-* Make sure yor changes has test coverage `open coverage/index.html`
+* Run `bundle exec rake test_app` to create the test application in `spec/test_app`
+* Make your changes and follow this [Style Guide](https://github.com/thoughtbot/guides)
+* Ensure specs pass by running `bundle exec rspec spec`
 * Submit your pull request
 
-Copyright (c) 2013 Paul Callaghan, released under the New BSD License
+Copyright (c) 2013 Paul Callaghan, released under the [New BSD License][3]
+
+[1]: http://www.fsf.org/licensing/essays/free-sw.html
+[2]: https://github.com/spree/spree_reviews/issues
+[3]: https://github.com/spree/spree_reviews/tree/master/LICENSE
+

@@ -22,6 +22,7 @@ class Spree::Admin::ReviewsController < Spree::Admin::ResourceController
       redirect_to admin_reviews_path and return
     end
   end
+
 private
 
   def collection
