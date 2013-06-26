@@ -8,6 +8,7 @@ class Spree::ReviewsController < Spree::StoreController
   end
 
   def new
+    return redirect_to spree.login_path if !spree_user_signed_in?
     @review = Spree::Review.new(product: @product)
     authorize! :create, @review
   end
