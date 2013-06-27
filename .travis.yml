@@ -10,7 +10,6 @@ script:
 notifications:
   email:
     - hi@futhr.io
-    - support@hydrogarden.se
   irc:
     use_notice: true
     skip_join: true
