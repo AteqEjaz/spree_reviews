@@ -1,15 +1,15 @@
 class Spree::Review < ActiveRecord::Base
-  belongs_to :product
+  belongs_to :product, class_name: 'Spree::Product'
   belongs_to :user, class_name: Spree.user_class.to_s
   has_many   :feedback_reviews
 
   after_save :recalculate_product_rating, if: :approved?
   after_destroy :recalculate_product_rating
 
-  validates_presence_of     :name, :review
+  validates :name, :review, presence: true
   validates_numericality_of :rating, only_integer: true
 
-  default_scope order('spree_reviews.created_at DESC')
+  default_scope { order('spree_reviews.created_at DESC') }
 
   scope :localized, lambda { |lc| where('spree_reviews.locale = ?', lc) }
 

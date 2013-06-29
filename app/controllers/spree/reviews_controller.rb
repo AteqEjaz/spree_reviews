@@ -20,7 +20,7 @@ class Spree::ReviewsController < Spree::StoreController
     @review.product = @product
     @review.user = spree_current_user if spree_user_signed_in?
     @review.ip_address = request.remote_ip
-    @review.locale = I18n.locale.to_s if Spree::Reviews::Config[:track_locale]
+    @review.locale = I18n.locale.to_s if Spree::Reviews::Config.track_locale
 
     authorize! :create, @review
 
@@ -35,7 +35,7 @@ class Spree::ReviewsController < Spree::StoreController
   def terms
   end
 
-private
+  private
 
   def load_product
     @product = Spree::Product.find_by_permalink!(params[:product_id])
