@@ -21,10 +21,3 @@ task :test_app do
   ENV['LIB_NAME'] = 'spree_reviews'
   Rake::Task['common:test_app'].invoke('Spree::User')
 end
-
-namespace :test_app do
-  desc 'Rebuild test database'
-  task :rebuild do
-    system 'cd spec/dummy && rake db:drop db:migrate RAILS_ENV=test'
-  end
-end
