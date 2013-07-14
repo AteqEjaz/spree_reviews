@@ -13,7 +13,7 @@ class Spree::ReviewSweeper < ActionController::Caching::Sweeper
     expire_cache_for(review)
   end
 
-private
+  private
 
   def expire_cache_for(review)
     review.recalculate_product_rating
