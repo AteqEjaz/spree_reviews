@@ -15,7 +15,7 @@ gem 'spree_reviews', github: 'spree/spree_reviews'
 
 Run
 
-  bundle install
+    bundle install
     rails g spree_reviews:install
     rake db:migrate
 
