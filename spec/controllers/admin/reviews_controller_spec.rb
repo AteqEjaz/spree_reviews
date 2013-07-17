@@ -16,19 +16,33 @@ describe Spree::Admin::ReviewsController do
     end
 
     it "show error message when not approved" do
+      Spree::Review.any_instance.stub(:update_attribute).and_return(false)
       spree_get :approve, id: review.id
-      response.should redirect_to spree.admin_reviews_path
-      # flash[:error].should eql Spree.t(:error_approve_review)
+      flash[:error].should eql Spree.t(:error_approve_review)
     end
   end
 
   context "#edit" do
     specify do
-      review.product = nil
       spree_get :edit, id: review.id
-      review.product.should be_nil
       response.status.should eq 200
-      # flash[:error].should eql Spree.t(:error_no_product)
+    end
+
+    context ":product is nil" do
+
+      before{ review.product = nil; review.save! }
+
+      it "should flash error: no-product " do
+        spree_get :edit, id: review.id
+        flash[:error].should eql Spree.t(:error_no_product)
+      end      
+
+      it "should redirect to admin-reviews page" do
+        spree_get :edit, id: review.id
+        response.should redirect_to spree.admin_reviews_path        
+      end
     end
   end
+
+
 end
