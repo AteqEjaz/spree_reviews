@@ -7,8 +7,8 @@ sv:
         ip_address: IP
         name: "Ditt namn"
         rating: Betyg
-        review: Inehåll
-        title: Titel
+        review: Innehåll
+        title: Rubrik
         user: Användare
     models:
       spree/review:
@@ -36,7 +36,7 @@ sv:
     from: från
     guideline_text: "Vi förbehåller oss rätten att inte publicera yttranden som inte är relaterade till din produkt"
     info_approve_review: "Recensionen godkänd"
-    leave_us_a_review_for: "Vänligen gör en recension och sätt ett betyg för %{name}"
+    leave_us_a_review_for: "Recension och betyg för %{name}"
     no_reviews_available: "Inga recensioner har ännu skrivits för den här produkten."
     original_version: "Original versionn"
     out_of_5: "ut av 5"
@@ -71,3 +71,4 @@ sv:
     was_this_review_helpful: "Var denna recension användbar för dig?"
     write_your_own_review: "Skriv din egen recension"
     you_must_enter_value_for_rating: "Du måste ange ett värde för betyg."
+    submission_guidelines: Submission riktlinjer
