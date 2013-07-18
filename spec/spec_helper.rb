@@ -43,6 +43,11 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = false
 
+  config.before :suite do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with :truncation
+  end
+
   config.before do
     DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
