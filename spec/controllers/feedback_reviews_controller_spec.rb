@@ -32,7 +32,7 @@ describe Spree::FeedbackReviewsController do
     end
 
     it "sets locale on feedback-review if required by config" do
-      Spree::Reviews::Config.preferred_track_locale=true
+      Spree::Reviews::Config.preferred_track_locale = true
       spree_post :create, valid_attributes
       assigns[:review].locale.should eq("en")
     end
@@ -51,7 +51,7 @@ describe Spree::FeedbackReviewsController do
 
     it "doesn't create feedback-review if review doesn't exist" do
       feedback_review_params = valid_attributes
-      feedback_review_params[:review_id]=nil
+      feedback_review_params[:review_id] = nil
       expect {
         spree_post :create, feedback_review_params
       }.to change{ Spree::FeedbackReview.count }.by(0)

@@ -23,7 +23,6 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/webkit'
 require 'ffaker'
-require 'database_cleaner'
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
@@ -35,7 +34,6 @@ require 'spree/testing_support/url_helpers'
 Dir[File.join(File.dirname(__FILE__), 'factories/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
-  config.include Capybara::DSL, type: :request
   config.include Spree::TestingSupport::ControllerRequests
   config.include FactoryGirl::Syntax::Methods
   config.include Spree::TestingSupport::UrlHelpers
@@ -44,14 +42,9 @@ RSpec.configure do |config|
 
   config.mock_with :rspec
   config.use_transactional_fixtures = false
-  config.fail_fast = ENV['FAIL_FAST'] || false
 
   config.before do
-    if example.metadata[:js]
-      DatabaseCleaner.strategy = :truncation
-    else
-      DatabaseCleaner.strategy = :transaction
-    end
+    DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
     DatabaseCleaner.start
   end
 

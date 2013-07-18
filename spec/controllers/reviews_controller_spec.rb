@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Spree::ReviewsController do
-
   let(:user) { create(:user) }
   let(:approved_review) { create(:review, approved: true) }
   let(:product){ create(:product) }
@@ -10,7 +9,7 @@ describe Spree::ReviewsController do
       review:   { rating: "3 stars",
                   name:   "Abhishek",
                   title:  "Great Product",
-                  review: "some big review text"  }}
+                  review: "some big review text" }}
   end
 
   context "#terms" do
@@ -22,7 +21,7 @@ describe Spree::ReviewsController do
   end
 
   context "#index" do
-    it "should list approved reviews" do
+    it "list approved reviews" do
       controller.stub(current_spree_user: user)
       approved_reviews = [
         create(:review, product_id: product.id, approved: true),
@@ -34,19 +33,19 @@ describe Spree::ReviewsController do
   end
 
   context "#new" do
-    it "should render the new template" do
+    it "render the new template" do
       controller.stub(current_spree_user: user)
       spree_get :new, product_id: product.permalink
       response.should render_template :new
     end
 
-    it "should redirect to login if the user is not logged in" do
+    it "redirect to login if the user is not logged in" do
       controller.stub(current_spree_user: nil)
       spree_get :new, product_id: product.permalink
       response.should redirect_to spree.login_path
     end
 
-    it "should fail if the user is not authorized to create a review" do
+    it "fail if the user is not authorized to create a review" do
       controller.stub(:authorize!){ raise }
       expect{
         spree_post :new, product_id: product.permalink
@@ -55,10 +54,7 @@ describe Spree::ReviewsController do
   end
 
   context "#create" do
-
-    before(:each) do
-      controller.stub(current_spree_user: user)
-    end
+    before { controller.stub(current_spree_user: user) }
 
     it "creates a new review" do
       expect {
@@ -107,11 +103,10 @@ describe Spree::ReviewsController do
 
     context "when config requires locale tracking:" do
       it "sets the locale" do
-        Spree::Reviews::Config.preferred_track_locale=true
+        Spree::Reviews::Config.preferred_track_locale = true
         spree_post :create, review_params
         assigns[:review].locale.should eq("en")
       end
     end
-
   end
 end

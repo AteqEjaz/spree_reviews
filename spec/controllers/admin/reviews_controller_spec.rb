@@ -29,20 +29,17 @@ describe Spree::Admin::ReviewsController do
     end
 
     context ":product is nil" do
-
-      before{ review.product = nil; review.save! }
+      before { review.product = nil; review.save! }
 
       it "should flash error: no-product " do
         spree_get :edit, id: review.id
         flash[:error].should eql Spree.t(:error_no_product)
-      end      
+      end
 
       it "should redirect to admin-reviews page" do
         spree_get :edit, id: review.id
-        response.should redirect_to spree.admin_reviews_path        
+        response.should redirect_to spree.admin_reviews_path
       end
     end
   end
-
-
 end
