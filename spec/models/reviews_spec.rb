@@ -83,4 +83,37 @@ describe Spree::Review do
       review.feedback_stars.should == 2
     end
   end
+
+  describe "class methods" do
+    let(:r1) { create(:review, approved:false) }
+    let(:r2) { create(:review, approved:false) }
+    let(:r3) { create(:review, approved:true) }
+
+    context ".not_approved" do
+      it "lists unapproved reviews" do
+        Spree::Review.not_approved.should =~ [r1,r2]
+      end
+    end
+
+    context ".approval_filter" do
+      it "lists all reviews when Config.include_unapproved_reviews is true" do
+        Spree::Reviews::Config[:include_unapproved_reviews] = true
+        Spree::Review.approval_filter.should =~ [r1,r2,r3]
+      end
+
+      it "lists only approved reviews when Config.include_unapproved_reviews is false" do
+        Spree::Reviews::Config[:include_unapproved_reviews] = true
+        Spree::Review.approval_filter.should =~ [r1,r2]
+      end
+    end
+
+    context ".preview" do
+      it "lists 4 reviews when Config.preview_size is 2" do
+        Spree::Reviews::Config[:preview_size] = 2
+        reviews = r1,r2,r3                        ## To create the reviews
+        Spree::Review.preview.size.should eq(2)
+      end
+    end
+
+  end
 end
