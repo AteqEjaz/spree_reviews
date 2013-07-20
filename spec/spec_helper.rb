@@ -22,6 +22,8 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/webkit'
+require 'i18n-spec'
+require 'shoulda-matchers'
 require 'ffaker'
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
