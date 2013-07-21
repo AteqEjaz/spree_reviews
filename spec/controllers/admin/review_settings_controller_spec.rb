@@ -16,7 +16,6 @@ describe Spree::Admin::ReviewSettingsController do
             show_email:         false,
             feedback_rating:    false,
             require_login:      true,
-            always_show_create: false,
             track_locale:       true" do
 
       it "sets preferred_preview_size to 4" do
@@ -37,11 +36,6 @@ describe Spree::Admin::ReviewSettingsController do
       it "sets preferred_require_login to true" do
         spree_put :update, preferences: {require_login: true}
         Spree::Reviews::Config.preferred_require_login.should eq(true)
-      end
-
-      it "sets preferred_always_show_create to false" do
-        spree_put :update, preferences: {always_show_create: false}
-        Spree::Reviews::Config.preferred_always_show_create.should eq(false)
       end
 
       it "sets preferred_track_locale to true" do
