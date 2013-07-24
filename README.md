@@ -1,21 +1,21 @@
 # Reviews
 
-[![Build Status](https://secure.travis-ci.org/futhr/spree_reviews.png?branch=master)](http://travis-ci.org/futhr/spree_reviews)
+[![Build Status](https://secure.travis-ci.org/futhr/spree_reviews.png?branch=2-0-stable)](http://travis-ci.org/futhr/spree_reviews)
 [![Dependency Status](https://gemnasium.com/futhr/spree_reviews.png)](https://gemnasium.com/futhr/spree_reviews)
-[![Coverage Status](https://coveralls.io/repos/futhr/spree_reviews/badge.png?branch=master)](https://coveralls.io/r/futhr/spree_reviews)
+[![Coverage Status](https://coveralls.io/repos/futhr/spree_reviews/badge.png?branch=2-0-stable)](https://coveralls.io/r/futhr/spree_reviews)
 
 Straightforward review/rating facility.
 
 ## Installation
 
-Add to your `Gemfile`:
+Add to your `Gemfile`
 ```ruby
-gem 'spree_reviews', github: 'spree/spree_reviews'
+gem 'spree_reviews', github: 'futhr/spree_reviews', branch: '2-0-stable'
 ```
 
 Run
 
-  bundle install
+    bundle install
     rails g spree_reviews:install
     rake db:migrate
 
@@ -87,6 +87,6 @@ Copyright (c) 2013 Paul Callaghan, released under the [New BSD License][3]
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/spree/spree_reviews/issues
-[3]: https://github.com/spree/spree_reviews/tree/master/LICENSE.md
+[3]: https://github.com/spree/spree_reviews/blob/2-0-stable/LICENSE.md
 [4]: http://www.localeapp.com/projects/4921
 [5]: https://github.com/thoughtbot/guides
