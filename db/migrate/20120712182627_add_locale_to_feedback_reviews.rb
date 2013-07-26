@@ -1,9 +1,5 @@
 class AddLocaleToFeedbackReviews < ActiveRecord::Migration
-  def up
+  def change
     add_column :spree_feedback_reviews, :locale, :string, default: 'en'
-  end
-
-  def down
-    remove_column :spree_feedback_reviews, :locale
   end
 end

@@ -1,9 +1,5 @@
 class AddIpAddressToReviews < ActiveRecord::Migration
-  def up
+  def change
     add_column :reviews, :ip_address, :string
-  end
-
-  def down
-    remove_column :reviews, :ip_address
   end
 end

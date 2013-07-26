@@ -1,5 +1,5 @@
 class CreateFeedbackReviews < ActiveRecord::Migration
-  def up
+  def change
     create_table :feedback_reviews do |t|
       t.integer :user_id
       t.integer :review_id, null: false
@@ -9,9 +9,5 @@ class CreateFeedbackReviews < ActiveRecord::Migration
     end
     add_index :feedback_reviews, :review_id
     add_index :feedback_reviews, :user_id
-  end
-
-  def down
-    drop_table :feedback_reviews
   end
 end

@@ -1,5 +1,5 @@
 class CreateReviews < ActiveRecord::Migration
-  def up
+  def change
     create_table :reviews do |t|
       t.integer :product_id
       t.string  :name
@@ -10,9 +10,5 @@ class CreateReviews < ActiveRecord::Migration
       t.boolean :approved, default: false
       t.timestamps
     end
-  end
-
-  def down
-    drop_table :reviews
   end
 end
