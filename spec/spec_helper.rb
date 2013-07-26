@@ -40,8 +40,9 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::ControllerRequests
   config.include FactoryGirl::Syntax::Methods
   config.include Spree::TestingSupport::UrlHelpers
+  config.include Devise::TestHelpers, type: :controller
 
-  config.extend Spree::TestingSupport::AuthorizationHelpers::Request, type: :feature
+  config.extend Spree::TestingSupport::AuthorizationHelpers
 
   config.mock_with :rspec
   config.use_transactional_fixtures = false
