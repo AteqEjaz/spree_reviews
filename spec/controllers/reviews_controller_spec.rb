@@ -40,7 +40,6 @@ describe Spree::ReviewsController do
       controller.stub spree_current_user: user
       sign_in user
       spree_get :new, product_id: product.permalink
-      #pending %q{expecting <"new"> but rendering with <"">}
       response.should render_template :new
     end
 
@@ -51,11 +50,9 @@ describe Spree::ReviewsController do
     end
 
     it "fail if the user is not authorized to create a review" do
-      #pending(Now Passing) "expected Exception but nothing was raised"
       controller.stub(:authorize!) { raise }
       expect {
         spree_post :new, product_id: product.permalink
-        #Give it a reason to throw an exception
         assert_match 'ryanbig', @response.body
       }.to raise_error
     end
@@ -99,7 +96,6 @@ describe Spree::ReviewsController do
     end
 
     it "sets the current spree user as review's user" do
-      #pending(Now Passing) "returns nil so its a relation issue probably"
       spree_post :create, review_params
       review_params[:review].merge!(user_id:user.id)
       assigns[:review][:user_id] = user.id
